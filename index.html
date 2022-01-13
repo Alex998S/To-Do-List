@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>ToDoV2</title>
+        <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a5dc5360cf.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap" rel="stylesheet">
+        <!-- <script defer src="script.js"></script> -->
+    </head>
+    <header>
+
+    </header>
+    <body>
+        <div class="my-title">
+            <h1 class="big-title">My To Do List</h1>
+        </div>
+        <div class="container">
+            <div class="todo-list-container">
+                <div class="todo-list-title">
+                    <h2 class="list-title">My List</h2>
+                </div>
+                <div class="todo-list-items">
+                    <ul class="list-items" data-lists>
+                        <!-- <li class="active-item">Work</li>
+                        <li class="list-item">Game</li>
+                        <li class="list-item">3D Model</li>
+                        <li class="list-item">3D Model</li> -->
+                    </ul>
+                </div>
+                <div class="todo-add-list">
+                    <form action="" data-new-list-form>
+                        <input type="text"
+                        class="add-list"
+                        data-new-list-input
+                        placeholder="Add new list"
+                        aria-label="Add new list"
+                        />
+                        <button class="btn-create-list"><i class="fas fa-plus"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="todo-task-container" data-list-display-container>
+                <div class="todo-task-title">
+                    <h2 class="task-title" data-list-title>Work</h2>
+                    <p class="task-count" data-list-count>3 remaining</p>
+                </div>
+                <div class="todo-task-items" data-tasks>
+
+                    <!--Item 1-->
+                    <div class="task-item">
+                        <input 
+                        class="task-checkbox"
+                        type="checkbox"
+                        id=task-1
+                        />
+                        <label for="task-1">
+                            <span class="custom-checkbox">
+                                Do project
+                            </span>
+                        </label>
+                        <button class="btn-task-delete" data-task-delete><i class="fas fa-trash"></i></button>
+                    </div>
+
+                    <!--Item 2-->
+                    <div class="task-item">
+                        <input 
+                        class="task-checkbox"
+                        type="checkbox"
+                        id=task-2
+                        />
+                        <label for="task-2">
+                            <span class="custom-checkbox">
+                                Do project 2
+                            </span>
+                        </label>
+                        <button class="btn-task-delete"><i class="fas fa-trash"></i></button>
+                    </div>
+
+                    <!--Item 3-->
+                    <div class="task-item">
+                        <input 
+                        class="task-checkbox"
+                        type="checkbox"
+                        id=task-3
+                        />
+                        <label for="task-3">
+                            <span class="custom-checkbox">
+                                Do project
+                            </span>
+                        </label>
+                        <button class="btn-task-delete"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="todo-add-task">
+                    <form action="" data-new-task-form>
+                        <input 
+                        data-new-task-input
+                        type="text"
+                        class="add-task"
+                        placeholder="Add new task"
+                        aria-label="Add new task"
+                        />
+                        <button class="btn-create-task"><i class="fas fa-plus"></i></button>
+                    </form>
+                </div>
+                <div class="todo-task-delete">
+                    <button class="btn-delete-completed" data-clear-complete-task-button>Delete completed tasks</button>
+                    <button class="btn-delete-all" data-delete-list-button>Delete list</button>
+                </div>
+            </div>
+        </div>
+        
+    <template id="task-template">
+        <div class="task-item">
+            <input 
+            class="task-checkbox"
+            type="checkbox"
+            />
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+            <button class="btn-task-delete"><i class="fas fa-trash"></i></button>
+        </div>
+    </template>
+    <script defer src="script.js"></script>
+    </body>
+</html>

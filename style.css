@@ -1,0 +1,264 @@
+:root{
+    --fnt-primary: 'Readex Pro', sans-serif;
+    --clr-task-background: #E4E4E4;
+}
+
+*::before,
+*::after{
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/*Backgrounds*/
+
+body{
+  background-image: url(office2.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+.todo-list-container, .todo-task-container{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    color: white;
+}
+
+.my-title{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    color: white;
+    float: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/*Position*/
+
+.my-title{
+    margin-top: 5rem;
+}
+
+
+.container{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 5rem;
+}
+
+.todo-list-container{
+    flex: 1;
+    margin-left: 100px;
+    margin-right: 120px;
+}
+
+.todo-task-container{
+    flex: 2;
+    margin-right: 140px;
+    margin-left: 100px;
+}
+
+.todo-list-title, .todo-task-title{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+}
+
+.task-title{
+    flex: 1;
+   margin-left: 50px;
+   text-align: center;
+}
+
+.task-count{
+    flex: 1;
+    margin-top: 25px;
+    margin-left: 10px;
+    text-align: left;
+    padding-top: 11px;
+}
+
+.list-title{
+    flex: 1;
+    text-align: center;
+}
+
+form{
+    display: flex;
+}
+
+.todo-add-list, .todo-add-task{
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    margin-left: 120px;
+    margin-right: 50px;
+}
+
+.add-list, .add-task{
+    max-width: 200px;
+}
+.todo-task-items{
+    margin-top: 20px;
+    margin-left: 30px;
+    justify-content: space-between;
+}
+
+.task-item{
+    margin-left: 40px;
+    margin-right: 100px;
+    display: flex;
+    margin-bottom: 10px;
+    float: center;
+}
+
+.custom-checkbox{
+    display: inline-block;
+    min-width: 10rem;
+    margin-left: 1rem;
+}
+
+.todo-task-delete{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+}
+
+@media (max-width: 1000px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .todo-list-container{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/*Styles*/
+
+.big-title{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    font-family: var(--fnt-primary);
+}
+
+.list-title{
+    font-size: 2rem;
+    font-family: var(--fnt-primary);
+}
+
+.task-title{
+    font-size: 1.8rem;
+    font-family: var(--fnt-primary);
+}
+
+.list-item{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-family: var(--fnt-primary);
+}
+
+.list-item:hover{
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.active-item{
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-family: var(--fnt-primary);
+}
+
+.add-list, .add-task{
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: inherit;
+    border-bottom: 1px solid white;
+    transition: border-bottom 150ms ease-in;
+    order: 2;
+    font-size: 1.3rem;
+    padding-bottom: 5px;
+}
+
+.add-list:focus, .add-task:focus{
+    border-bottom-width: 3px;
+}
+
+.add-list:focus::placeholder, .add-task:focus::placeholder{
+    opacity: 0.2;
+}
+
+.btn-delete-completed, .btn-delete-all{
+    font-size: 1rem;
+    font-family: var(--fnt-primary);
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: white;
+}
+.btn-delete-completed:hover, .btn-delete-all:hover{
+    font-weight: 600;
+}
+
+.custom-checkbox{
+    font-size: 1.3rem;
+    font-family: var(--fnt-primary);
+}
+
+.custom-checkbox:hover{
+    font-weight: 600;
+}
+
+.btn-task-delete{
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn-task-delete:hover{
+    color: red;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.btn-create-list, .btn-create-task{
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn-create-list:hover, .btn-create-task:hover{
+    background-color: white;
+    border-radius: 4px;
+    color: greenyellow;
+}
+
+.task-checkbox{
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: scale(1);
+    transform: transform 300ms ease-in-out;
+}
+
+.task-item:hover, .task-checkbox{
+    transform: scale(1.02);
+}
+
+[type=checkbox]:checked + label{
+    color: yellowgreen;
+}
