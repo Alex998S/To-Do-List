@@ -223,6 +223,7 @@ form{
 }
 
 .btn-task-delete{
+    display: none;
     background: transparent;
     border: 0;
     color: white;
@@ -230,6 +231,7 @@ form{
 }
 
 .btn-task-delete:hover{
+    display: none;
     color: red;
     background-color: white;
     border-radius: 4px;
